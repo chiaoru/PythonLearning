@@ -1,0 +1,8 @@
+Channel secret
+76969b4724d5c368ec7f3b7d7cdddeb7
+
+Channel access token
+Bcg4ZFQ/I3CwbyK3HF/uE/XuUhrnSo0Klf9KjntYBJ0aU4wWfZ7fGYsibiN4JrVg8BV0VWiP6hugWlHCj9wFFvP5xWrg4SXOgBihop6sIfplUEYGAExiEDy4B70al/iiEzMAiMAVaSy2I0YSeTSM8AdB04t89/1O/w1cDnyilFU=
+
+ChatGPT API Key
+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
