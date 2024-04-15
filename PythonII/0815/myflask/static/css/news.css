@@ -1,0 +1,61 @@
+/*這是註解方式*/
+/*色票 https://www.colordic.org/w */
+body{
+	margin:0; /*外部距離都設為0 上下左右皆為0*/
+}
+
+#banner{
+	height:60px;
+	width:100%;
+}
+
+#menu{
+	height:50px;
+	width:100%;
+	background-color: #cbb994;
+
+}
+
+#menu li{
+	list-style: none; /*不要樣式*/
+	float:left; /*浮板*/
+	padding-left:2em; /*內距*/
+	padding-right:2em;
+}
+
+#menu ul{
+	line-height: 50px; /*當與menu高度一樣時會垂直置中*/
+	margin-left: 22%;
+}
+
+#menu a{
+	color: #432f2f;
+	text-decoration: none;
+	font-size: 24px;
+	font-weight:bold;
+}
+
+#content{
+	min-height:450px;
+	width:100%;
+}
+
+.newsarea{
+	width: 23%;
+	margin-left: 2em;
+	margin-right: 2em;
+	height: 300px;
+	float: left;
+}
+
+.newsarea img{
+	width: 100%; /* 在newsarea 23%中的100% */
+}
+
+#footer{
+	height:50px;
+	width:100%;
+	background-color: #86A697;
+	color:#44617b;
+}
+
