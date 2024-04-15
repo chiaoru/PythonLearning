@@ -19,10 +19,10 @@ header = {
 
 
 param = {
-    'Account': '105546807',
-    'Password': 'M221981389',
+    'Account': '',
+    'Password': '',
     'RememberMe': 'false',
-    '__RequestVerificationToken': 'Y9xj4pjbz8SGCbbOayx7kbAehtsZ2iloq2Frm22Eh2ywhs_Z9tYk3Ljt2a4udrDvKeavJt7D0hspX7QD2V3RdgnEAG3DfUajByPKx2OSM0s1'        
+    '__RequestVerificationToken': ''        
     }
 
 session_requests = requests.session() # 建立一個session連線的方法
