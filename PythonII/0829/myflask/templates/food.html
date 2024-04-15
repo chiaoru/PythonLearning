@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %} 
+美食
+{% endblock %}
+
+{% block css %}
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/food.css') }}" >
+{% endblock %}
+
+{% block maincontent %}
+
+	<div style="height:30px"></div>
+
+	<div class="allfood">
+		{% for item in food %}
+			
+			<div class="foodarea">
+				<p>日期:{{item[0]}}</p>
+				<a href="{{item[3]}}" target="_blank"><img src="{{item[2]}}"></a> <!-- {{item[4]}} 依照資料庫內位置填寫 target="_blank" 跳新分頁 -->
+				<p>{{item[1]}}</p>
+				
+			</div>
+
+		{% endfor %}
+	</div>
+{% endblock %}

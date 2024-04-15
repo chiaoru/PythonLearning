@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %} 
+首頁
+{% endblock %}
+
+{% block maincontent %}
+
+	<div style="height:30px"></div>
+	
+	<div id='leftArea'>
+		{% for item in allGoods %}
+		<div class='area'>
+			<img src='{{item[3]}}'>
+			<p>{{item[2]}}</p>
+		</div>
+		{% endfor %}
+	</div>
+
+	<div id='centerArea'>
+		{% for item in allnews %}
+		<div class='newsarea'>
+			<img src='{{item.photo_url}}'><p>{{item.title}}</p>
+			
+		</div>
+		{% endfor %}
+	</div>
+
+	<div id='rightArea'>
+		{% for item in food %}
+		<div class='area'>
+			<img src='{{item[2]}}'>
+			<p>{{item[1]}}</p>
+		</div>
+		{% endfor %}
+	</div>
+
+
+
+
+
+
+
+{% endblock %}

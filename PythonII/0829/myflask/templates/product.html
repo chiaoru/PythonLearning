@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %} 
+產品
+{% endblock %}
+
+{% block css %}
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/product.css') }}" >
+{% endblock %}
+
+{% block maincontent %}
+
+	<div style="height:30px"></div>
+
+	<div class="search">
+		<form action="" method="get">
+			價格：<input type="text" name="startPrice"/>
+			~ <input type="text" name="endPrice"/>
+			<input type="submit" value="查詢"/>
+		</form>
+
+	<div class="allGoods">
+		{% for item in allGoods %}
+			
+			<div class="goodarea">
+				<a href="{{item[4]}}" target="_blank"><img src="{{item[3]}}"></a> <!-- {{item[4]}} 依照資料庫內位置填寫 target="_blank" 跳新分頁 -->
+				<p>{{item[2]}}</p>
+				<p style="text-align:right;">NT:{{item[6]}}</p>
+			</div>
+
+		{% endfor %}
+	</div>
+{% endblock %}

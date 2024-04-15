@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %} 
+聯絡我們
+{% endblock %}
+
+{% block css %}
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/contact.css') }}" >
+{% endblock %}
+
+{% block maincontent %}
+
+	<div style="height:30px"></div>
+
+	<div id="message">
+		<p>與我聯絡</p>
+		<form class='contact_form' method="post" action="/addContact">
+			<div class='form-group'>
+				<label>標題</label>
+				<input type="text" name="title" class="form-control" required />
+			</div>
+
+			<div class='form-group'>
+				<label>姓名</label>
+				<input type="text" name="name" class="form-control" required />
+			</div>
+
+			<div class='form-group'>
+				<label>E-mail</label>
+				<input type="text" name="email" class="form-control" required />
+			</div>
+
+			<div class='form-group'>
+				<label>內容</label>
+				<textarea name="content" rows='10' class='form-control' required></textarea>
+			</div>
+
+			<div class='form-group'>
+				<buttom type='submit' class='btn_submit'>送出</buttom>
+			</div>
+
+		</form>
+	</div>
+
+	
+	
+
+
+
+
+
+
+
+{% endblock %}

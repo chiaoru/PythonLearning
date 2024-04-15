@@ -1,0 +1,23 @@
+/*這是註解方式*/
+/*色票 https://www.colordic.org/w */
+/* 因為繼承母版的css，所以相同的不用寫 */
+
+.allGoods{
+	margin-left: 5%;
+	margin-top: 2%;
+}
+
+.goodarea{
+	width: 21%;
+	margin-left: 2em;
+	margin-right: 2em;
+	height: 300px;
+	padding: 2em;
+	float: left;
+}
+
+.goodarea img{
+	width: 95%; /* 在newsarea 23%中的100% */
+}
+
+

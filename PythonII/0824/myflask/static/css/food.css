@@ -1,0 +1,23 @@
+/*這是註解方式*/
+/*色票 https://www.colordic.org/w */
+/* 因為繼承母版的css，所以相同的不用寫 */
+
+.allfood{
+	margin-top: 1%;
+	margin-left: 3%;
+}
+
+.foodarea{
+	width: 21%;
+	margin-left: 1.5em;
+	margin-right: 1.5em;
+	height: 280px;
+	float: left;
+}
+
+.foodarea img{
+	width: 95%; /* 在newsarea 23%中的100% */
+	border-radius: 1em;
+}
+
+
