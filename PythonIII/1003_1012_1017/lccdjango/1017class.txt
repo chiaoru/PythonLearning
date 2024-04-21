@@ -1,0 +1,85 @@
+cmd 
+	lccdjango/lcc
+
+		python manage.py startapp contact
+
+
+lccdjango/lcc/lcc/settings.py
+
+	INSTALLED_APPS = [
+	'contact',
+	]
+
+lccdjango/lcc/lcc/urls.py
+
+	from contact.views import contact
+
+	urlpatterns = [
+	path('contact/', contact),
+	]
+
+lccdjango/lcc/contact/models.py
+
+	class Messge(models.Model):
+		name = models.CharField(max_length = 50)
+		email = models.CharField(max_length = 50)
+		subject = models.CharField(max_length = 50)
+		content = models.TextField(null = True, blank = True)
+		create_date = models.DateTimeField(auto_now_add=True)
+
+		class Meta:
+			db_table = 'contact'
+
+	class MessageAdmin(admin.ModelAdmin):
+		list_display = ('name', 'email', 'subject')
+
+	admin.site.register(Message, MessageAdmin)
+
+lccdjango/lcc/contacct/admin.py
+	from .models import Message
+
+	class MessageAdmin(admin.ModelAdmin):
+		list_display = ('name', 'email', 'subject')
+
+	admin.site.register(Message, MessageAdmin)
+
+lccdjango/lcc/contact/views.py
+	from .models import Message
+
+
+	def contact(request):
+		if 'username' in request.POST:
+			uname = request.POST['username']
+			umail = request.POST['email']
+			usub = request.POST['subject']
+			ucontent = request.POST['content']
+
+			# 將收到的資料新增到資料庫中的資料表
+			obj = Message.objects.create(name=uname, email=umail, subject=usub, content=ucontent)
+			obj.save()
+
+			# 標準資料庫SQL語法為
+			# insert into contact(name, email, subject, content) values('Bill', 'bill@gmail.com', '學python', '去哪裡學')
+
+
+		
+		return render(request, 'contact.html')
+
+
+cmd
+	python manage.py makemigrations
+	python manage.py migrate
+
+
+cmd (after finish contact.html)
+
+	mysql -u root -p
+	use mylcc
+	select * from contact;
+
+	確認資料是否有被填入資料夾
+
+	exit
+
+	mysqldump --no-default -u root -p mylcc > mylcc1017.sql
+	
