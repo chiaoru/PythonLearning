@@ -1,0 +1,34 @@
+# HSL 與 HSV 色彩空間
+# https://ithelp.ithome.com.tw/articles/10234958?sc=iThelpR
+
+import cv2
+import numpy as np
+
+# 綠色
+#lower = np.array([45, 150, 50])
+#upper = np.array([65, 255, 255])
+
+# 黃色
+lower = np.array([26, 43, 43])
+upper = np.array([34, 255, 255])
+
+cap = cv2.VideoCapture(0)
+while cap.isOpened():
+    _, img = cap.read()
+    # 遮罩
+    # inRange 使用HSV 色像飽和度亮度去偵測
+    # 色相 越低越灰 越高越白
+    # 亮度 越低越暗 越高越白
+    mask = cv2.inRange(img, lower, upper)
+    # bitwise 位元運算
+    # bitwise_and 色彩交集 ，如數字相等，回傳0，其他部分以原圖為主
+    # 把原圖遮罩，只顯示上列顏色
+    output = cv2.bitwise_and(img, img, mask=mask)
+
+    cv2.imshow('img', output)
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+    
+cap.release() 
+cv2.destroyAllWindows()
+
