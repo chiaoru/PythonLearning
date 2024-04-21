@@ -1,0 +1,81 @@
+/*色票 https://www.colordic.org/w */
+
+body{
+	margin:0; /* 外部距離 上下左右都是0 */
+	font-size: 20px;
+	font-family: "Helvetica", "Arial","LiHei Pro","黑體-繁","微軟正黑體", sans-serif;
+}
+
+#wrapper{
+
+}
+
+#banner{
+	width: 100%;
+	height: 80px;
+}
+
+#logo{
+	float: left;
+	margin-left: 2em;
+}
+
+#logo img{
+	height: 100px;
+
+}
+
+#search{
+	float: right;
+	margin-right: 3em;
+	margin-top: 2em;
+}
+
+#search input{
+	border-radius: 5%;
+}
+
+#search button{
+	background-image:url("/static/images/search.png");
+	height: 35px;
+	width: 30px;
+	border: none;
+	padding-top: 20px;
+}
+
+#menu{
+	width: 100%;
+	height: 40px;
+	background-color: #a5c9c1;
+	line-height: 45px;
+}
+
+#menu li{
+	list-style: none;
+	float: left;
+	padding-left: 1.5em;
+	padding-right: 1.5em;
+}
+
+#menu a{
+	text-decoration: none;
+	font-weight: bold;
+	color: #622d18;
+
+}
+
+#content{
+	width: 100%;
+	min-height: 76%;
+	background-color: #eaf4fc;
+}
+
+#footer{
+	clear: both;
+	width: 100%;
+	height: 40px;
+	background-color: #0f2350;
+	text-align: center;
+	line-height: 40px;
+	color: #dddcd6;
+}
